@@ -7,7 +7,9 @@ const LinearGradient = ({
   colors,
   locations,
   angle,
-  style,
+  useAngle,
+  angleCenter,
+  stylee,
   children,
   ...otherProps
 }) => {
@@ -22,7 +24,7 @@ const LinearGradient = ({
     <View
       {...otherProps}
       style={[
-        style,
+        stylee,
         {
           backgroundImage: `linear-gradient(${angle}deg,${getColors().join(',')})`
         },
